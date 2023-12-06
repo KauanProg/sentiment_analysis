@@ -16,6 +16,14 @@ class TeamSection extends StatelessWidget {
     'Kauan Deyvid',
   ];
 
+  List<String> pathImages = [
+    'assets/images/Franklin.jpg',
+    'assets/images/Mikaelly.jpg',
+    'assets/images/Pedro.jpg',
+    'assets/images/Joana.jpg',
+    'assets/images/Kauan.jpg',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -34,10 +42,7 @@ class TeamSection extends StatelessWidget {
               itemCount: 5,
               itemBuilder: (context, index) => Column(
                 children: [
-                  const CircleAvatar(
-                    radius: 100,
-                    backgroundColor: Colors.grey,
-                  ),
+                  ClipOval(child: Image.asset(pathImages[index], width: 200, height: 200)),
                   const SizedBox(height: 24),
                   Text(names[index], style: AppTypography.fontStyleEpilogue24(AppColors.neutralColorBlack))
                 ],
