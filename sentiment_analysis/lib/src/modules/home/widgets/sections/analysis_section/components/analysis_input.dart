@@ -1,4 +1,4 @@
-// ignore_for_file: depend_on_referenced_packages
+// ignore_for_file: depend_on_referenced_packages, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +12,8 @@ class AnalysisInput extends StatelessWidget {
 
   AnalysisInput({super.key});
 
+  static TextEditingController analysisController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,7 +21,7 @@ class AnalysisInput extends StatelessWidget {
       child: TextFormField(
         maxLines: 9,
         buildCounter: (context, {required currentLength, required isFocused, maxLength}) => null,
-        controller: null,
+        controller: analysisController,
         cursorColor: AppColors.blueColor,
         decoration: InputDecoration(
           hintText: 'Digite um texto...',

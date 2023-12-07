@@ -35,7 +35,7 @@ class _ButtomState extends State<AnalysisButton> {
         });
       },
       child: InkWell(
-        onTap: (){},
+        onTap: widget.function,
         child: Ink(
           width: 576,
           height: 56,
@@ -43,7 +43,7 @@ class _ButtomState extends State<AnalysisButton> {
             color: AppColors.blueColor,
             borderRadius: BorderRadius.circular(8),
           ),
-          child: Center(child: Text('Analisar', style: AppTypography.fontStyleRoboto20())),
+          child: Center(child: Text(widget.title!, style: AppTypography.fontStyleRoboto20())),
         ),
       ),
     );

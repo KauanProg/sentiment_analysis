@@ -1,4 +1,3 @@
-
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
@@ -26,6 +25,10 @@ class TeamSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    var width = size.width;
+    var height = size.height;
+
     return SizedBox(
       width: double.infinity,
       height: 512,
@@ -42,9 +45,23 @@ class TeamSection extends StatelessWidget {
               itemCount: 5,
               itemBuilder: (context, index) => Column(
                 children: [
-                  ClipOval(child: Image.asset(pathImages[index], width: 200, height: 200)),
-                  const SizedBox(height: 24),
-                  Text(names[index], style: AppTypography.fontStyleEpilogue24(AppColors.neutralColorBlack))
+                  Flexible(
+                    child: ClipOval(
+                      child: Image.asset(
+                        pathImages[index],
+                        width: width * 0.14,
+                        height: height * 0.20,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: height * 0.024),
+                  Text(
+                    names[index],
+                    style: AppTypography.fontStyleEpilogue24(
+                      AppColors.neutralColorBlack,
+                    ),
+                  )
                 ],
               ),
               separatorBuilder: (context, index) => const SizedBox(width: 48),

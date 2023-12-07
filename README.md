@@ -56,28 +56,14 @@ Após a aplicação dessas etapas de pré-processamento, os dados estão prontos
 ## 3. Seleção, Treinamento e Otimização do Algoritmo
 
 - **Escolha do Algoritmo:**
-  - Justificativa para a escolha do algoritmo de análise de sentimentos.
-  - Explicação sobre como o modelo foi selecionado com base nas características dos dados.
+  - Procedemos à seleção e treinamento de diversos modelos de classificação, como KNeighbors, Decision Tree, RandomForest, Logistic Regression, Multinomial Naive Bayes, SVM, Gradient Boosting e AdaBoost. Avaliamos o desempenho de cada modelo utilizando métricas como precisão, recall, F1-score e acurácia. Selecionamos o modelo SVM para treinamento devido à sua eficácia em problemas de classificação.
 
-- **Treinamento do Modelo:**
-  - Descrição do processo de treinamento, incluindo hiperparâmetros utilizados.
-  - Discussão sobre o conjunto de treinamento, validação e teste.
+![Modelos](images/Modelos.png)
 
-- **Otimização:**
-  - Estratégias adotadas para otimização do desempenho do modelo.
-  - Ajuste de hiperparâmetros e validação cruzada, se aplicável.
+- **Otimização do Modelo SVM:**
+  - O modelo SVM foi otimizado usando parâmetros específicos, como o kernel linear, para atender às características do problema em questão.
 
-## 4. Análise de Importância de Variáveis e Interpretabilidade
-
-- **Importância de Variáveis:**
-  - Métodos utilizados para avaliar a importância das variáveis no modelo.
-  - Discussão sobre as características mais influentes na análise de sentimentos.
-
-- **Interpretabilidade do Modelo:**
-  - Técnicas adotadas para tornar o modelo mais compreensível.
-  - Visualizações ou abordagens específicas para entender as decisões do modelo.
-
-## 5. Validação dos Resultados e Performance do Algoritmo
+## 4. Validação dos Resultados e Performance do Algoritmo
 
 - **Avaliação das Novas Sentenças:**
   - Para testar a capacidade de generalização do modelo, um conjunto de novas sentenças é criado. Essas sentenças são convertidas em vetores usando o mesmo método de vetorização previamente treinado.
